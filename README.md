@@ -19,3 +19,16 @@ This project leverages SQL Server to create a scalable and efficient database fo
 
 •	Provide a scalable database design that accommodates business growth and evolving requirements.
 
+## ERD and Relationship Among the Tables
+
+### The database consists of the following entities:
+
+1.	#Users:# Represents customers and sellers involved in transactions.
+2.	#Products:# Contains details of products offered.
+3.	#Categories:# Groups products into categories.
+4.	#Orders:# Tracks customer orders.
+5.	#Order Details:# Provides itemized details for each order.
+6.	#Payments:# Records payment information.
+7.	#Shipments:# Manages shipping and delivery details.
+8.	#Reviews:# Stores customer feedback and ratings.
+
