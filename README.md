@@ -77,6 +77,19 @@ This project leverages SQL Server to create a scalable and efficient database fo
 
 ![image](https://github.com/user-attachments/assets/dfc999db-47a4-4acc-89df-95a6d7f3d306)
 
+### Payments Table:
+
+![image](https://github.com/user-attachments/assets/c8a75c23-c3c4-437e-9cf9-685ff0c015c8)
+
+### Shipments Table:
+
+![image](https://github.com/user-attachments/assets/860e1e70-7e8a-4ee9-975c-1219dd974d4c)
+
+### Reviews Table:
+
+![image](https://github.com/user-attachments/assets/5263e17c-7519-496d-b456-ea9e01d56dcc)
+
+
 
 
 
