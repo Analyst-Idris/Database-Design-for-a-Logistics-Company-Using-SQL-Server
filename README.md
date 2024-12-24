@@ -32,3 +32,15 @@ This project leverages SQL Server to create a scalable and efficient database fo
 7.	Shipments: Manages shipping and delivery details.
 8.	Reviews: Stores customer feedback and ratings.
 
+###Relationships:
+•	A user can place multiple orders, but each order is linked to one user.
+•	A product belongs to one category, but each category can have multiple products.
+•	An order can include multiple order details, and each detail references a specific product.
+•	A shipment is associated with one order.
+•	A review is linked to a specific product and user.
+
+#ER Diagram: 
+![image](https://github.com/user-attachments/assets/20707775-fc99-4bd8-aa56-08451e110e94)
+
+
+
