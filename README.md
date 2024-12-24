@@ -51,9 +51,22 @@ This project leverages SQL Server to create a scalable and efficient database fo
 
 •	A review is linked to a specific product and user.
 
-# ER Diagram: 
+## ER Diagram: 
 
 ![image](https://github.com/user-attachments/assets/20707775-fc99-4bd8-aa56-08451e110e94)
+
+## Columns Descriptions
+
+### Users Table:
+
+Column Name	Data Type	Description
+UserID	INT (PK)	Unique identifier for each user.
+Name	VARCHAR(100)	Full name of the user.
+Email	VARCHAR(100)	User's email address.
+PasswordHash	VARCHAR(255)	Hashed password for authentication.
+Address	TEXT	User's physical address.
+Role	ENUM	User's role: buyer or seller.
+
 
 
 
