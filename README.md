@@ -59,13 +59,8 @@ This project leverages SQL Server to create a scalable and efficient database fo
 
 ### Users Table:
 
-Column Name	Data Type	Description
-UserID	INT (PK)	Unique identifier for each user.
-Name	VARCHAR(100)	Full name of the user.
-Email	VARCHAR(100)	User's email address.
-PasswordHash	VARCHAR(255)	Hashed password for authentication.
-Address	TEXT	User's physical address.
-Role	ENUM	User's role: buyer or seller.
+![image](https://github.com/user-attachments/assets/80008911-72f8-4ae1-a69f-d65cec7b9819)
+
 
 
 
