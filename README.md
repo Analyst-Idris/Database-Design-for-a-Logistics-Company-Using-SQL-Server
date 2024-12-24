@@ -24,20 +24,31 @@ This project leverages SQL Server to create a scalable and efficient database fo
 ### The database consists of the following entities:
 
 1.	Users: Represents customers and sellers involved in transactions.
+   
 2.	Products: Contains details of products offered.
+   
 3.	Categories: Groups products into categories.
+   
 4.	Orders: Tracks customer orders.
+   
 5.	Order Details: Provides itemized details for each order.
+   
 6.	Payments: Records payment information.
+   
 7.	Shipments: Manages shipping and delivery details.
+   
 8.	Reviews: Stores customer feedback and ratings.
 
 ###Relationships:
 
 •	A user can place multiple orders, but each order is linked to one user.
+
 •	A product belongs to one category, but each category can have multiple products.
+
 •	An order can include multiple order details, and each detail references a specific product.
+
 •	A shipment is associated with one order.
+
 •	A review is linked to a specific product and user.
 
 #ER Diagram: 
