@@ -1,5 +1,5 @@
 # Database-Design-for-a-Logistics-Company-Using-SQL-Server
-![image](https://github.com/user-attachments/assets/5b87e712-7ed2-41bf-8f0a-b52f516d361f)
+![Image](https://github.com/user-attachments/assets/619b51cc-19a8-4ed8-8b46-8d2e210b9935) ![Image](https://github.com/user-attachments/assets/d4eb84ce-33d0-44f6-bd3d-98006788bcfe)
 
 ## Introduction(Overview of the Project)
 
