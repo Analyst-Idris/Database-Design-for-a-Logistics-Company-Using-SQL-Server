@@ -23,21 +23,21 @@ This project leverages SQL Server to create a scalable and efficient database fo
 
 ### The database consists of the following entities:
 
-1.	Users: Represents customers and sellers involved in transactions.
+1.	**Users:** Represent customers and sellers involved in transactions.
    
-2.	Products: Contains details of products offered.
+2.	**Products:** Contains details of products offered.
    
-3.	Categories: Groups products into categories.
+3.	**Categories:** Groups products into categories.
    
-4.	Orders: Tracks customer orders.
+4.	**Orders:** Tracks customer orders.
    
-5.	Order Details: Provides itemized details for each order.
+5.	**Order Details:** Provides itemized details for each order.
    
-6.	Payments: Records payment information.
+6.	**Payments:** Records payment information.
    
-7.	Shipments: Manages shipping and delivery details.
+7.	**Shipments:** Manages shipping and delivery details.
    
-8.	Reviews: Stores customer feedback and ratings.
+8.	**Reviews:** Stores customer feedback and ratings.
 
 ### Relationships:
 
@@ -56,39 +56,121 @@ This project leverages SQL Server to create a scalable and efficient database fo
 ![image](https://github.com/user-attachments/assets/20707775-fc99-4bd8-aa56-08451e110e94)
 
 ## Columns Descriptions
+---
 
 ### Users Table:
 
-![image](https://github.com/user-attachments/assets/80008911-72f8-4ae1-a69f-d65cec7b9819)
+| Column Name   | Data Type      | Description                                 |
+|---------------|----------------|---------------------------------------------|
+| UserID        | INT (PK)       | Unique identifier for each user.            |
+| Name          | VARCHAR(100)   | Full name of the user.                      |
+| Email         | VARCHAR(100)   | User's email address.                       |
+| PasswordHash  | VARCHAR(255)   | Hashed password for authentication.         |
+| Address       | TEXT           | User's physical address.                    |
+| Role          | VARCHAR(255)   | User's role: buyer or seller.               |
+
+---
 
 ### Categories Table:
 
-![image](https://github.com/user-attachments/assets/adadbc15-75d8-4819-96ca-140173eaacb3)
+| Column Name   | Data Type    | Description                                |
+|---------------|--------------|--------------------------------------------|
+| CategoryID    | INT (PK)     | Unique identifier for each category.       |
+| CategoryName  | VARCHAR(100) | Name of the product category.              |
+
+---
 
 ### Products Table:
 
-![image](https://github.com/user-attachments/assets/01d40f64-11b1-4f2a-9ab2-acf009322430)
+| Column Name   | Data Type      | Description                                       |
+|---------------|----------------|---------------------------------------------------|
+| ProductID     | INT (PK)       | Unique identifier for each product.              |
+| ProductName   | VARCHAR(100)   | Name of the product.                             |
+| Description   | TEXT           | Details about the product.                       |
+| Price         | DECIMAL(10,2)  | Price of the product.                            |
+| StockQuantity | INT            | Available stock quantity.                        |
+| SellerID      | INT            | Foreign key referencing the Users table.         |
+| CategoryID    | INT            | Foreign key referencing the Categories table.    |
+
+---
 
 ### Orders Table:
 
-![image](https://github.com/user-attachments/assets/9fadf783-7291-4908-bfad-f57a14cd5a96)
+| Column Name     | Data Type      | Description                                            |
+|------------------|----------------|--------------------------------------------------------|
+| OrderID          | INT (PK)       | Unique identifier for each order.                     |
+| UserID           | INT            | Foreign key referencing the Users table.              |
+| OrderDate        | DATETIME       | Date and time of the order.                           |
+| TotalAmount      | DECIMAL(10,2)  | Total cost of the order.                              |
+| PaymentStatus    | VARCHAR(15)    | Status of the payment: pending, completed.            |
+| DeliveryStatus   | VARCHAR(15)    | Status of the delivery: pending, shipped.             |
+
+---
 
 ### OrderDetails Table:
 
-![image](https://github.com/user-attachments/assets/dfc999db-47a4-4acc-89df-95a6d7f3d306)
+| Column Name     | Data Type      | Description                                            |
+|------------------|----------------|--------------------------------------------------------|
+| OrderDetailID    | INT (PK)       | Unique identifier for each detail record.             |
+| OrderID          | INT            | Foreign key referencing the Orders table.             |
+| ProductID        | INT            | Foreign key referencing the Products table.           |
+| Quantity         | INT            | Quantity of the product in the order.                 |
+| Price            | DECIMAL(10,2)  | Price of the product in the order.                    |
+
+---
 
 ### Payments Table:
 
-![image](https://github.com/user-attachments/assets/c8a75c23-c3c4-437e-9cf9-685ff0c015c8)
+| Column Name     | Data Type      | Description                                            |
+|------------------|----------------|--------------------------------------------------------|
+| PaymentID        | INT (PK)       | Unique identifier for each payment.                   |
+| OrderID          | INT            | Foreign key referencing the Orders table.             |
+| PaymentDate      | DATETIME       | Date and time of the payment.                         |
+| Amount           | DECIMAL(10,2)  | Payment amount.                                       |
+| PaymentMethod    | VARCHAR(50)    | Method of payment.                                    |
+| PaymentStatus    | VARCHAR(15)    | Status of the payment: pending, completed.            |
+
+---
 
 ### Shipments Table:
 
-![image](https://github.com/user-attachments/assets/860e1e70-7e8a-4ee9-975c-1219dd974d4c)
+| Column Name     | Data Type      | Description                                            |
+|------------------|----------------|--------------------------------------------------------|
+| ShipmentID       | INT (PK)       | Unique identifier for each shipment.                  |
+| OrderID          | INT            | Foreign key referencing the Orders table.             |
+| ShipmentDate     | DATETIME       | Date of shipment.                                     |
+| DeliveryDate     | DATETIME       | Date of delivery.                                     |
+| ShipmentStatus   | VARCHAR(15)    | Status of the shipment.                               |
+
+---
 
 ### Reviews Table:
 
-![image](https://github.com/user-attachments/assets/5263e17c-7519-496d-b456-ea9e01d56dcc)
+| Column Name   | Data Type  | Description                                        |
+|----------------|------------|----------------------------------------------------|
+| ReviewID       | INT (PK)   | Unique identifier for each review.                |
+| ProductID      | INT        | Foreign key referencing the Products table.       |
+| UserID         | INT        | Foreign key referencing the Users table.          |
+| Rating         | INT        | Rating given by the user (1-5).                   |
+| Comments       | TEXT       | Feedback or comments by the user.                 |
 
+
+
+## Conclusion:
+
+
+This database design project offers a strong basis for overseeing the vital functions of a logistics company. The system effectively manages important data entities like users, products, orders, payments, shipments, and reviews by utilizing SQL Server to create a relational database structure. Accurate tracking, reporting, and decision-making across a range of business functions are made possible by the interconnected tables and well-defined relationships, which also facilitate smooth data storage and retrieval.
+
+The logistics company can use this system to streamline its operations in a scalable and dependable data environment, from order processing and inventory tracking to payment handling and shipment delivery. Data that is structured improves customer service quality, decreases redundancy, and increases operational efficiency. Additionally, the database's analytics capabilities enable the company to measure performance, obtain insights, and promptly adjust to changing market demands.
+
+Lastly, this SQL-based solution illustrates how a well-designed database can support long-term business growth and revolutionize logistical operations.
+
+---
+
+**Are you a business owner or organization finding it difficult to effectively manage and monitor your operations?**
+
+I can assist you in creating a scalable and well-organized database system that is customized to your unique workflow, and I am open to cooperation and teamwork. I can create effective database solutions that enhance data organization, expedite processes, and facilitate better decision-making, regardless of whether you are managing employee data, transactions, inventory, customer records, or any other operational process. 
+Together, let's transform your data into an effective tool for expansion and productivity.
 
 ![image](https://github.com/user-attachments/assets/47661e8a-3146-449d-ae03-3a3b00b83c5d)
 
