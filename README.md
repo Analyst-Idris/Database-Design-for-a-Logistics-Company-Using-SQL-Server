@@ -172,11 +172,9 @@ Lastly, this SQL-based solution illustrates how a well-designed database can sup
 I can assist you in creating a scalable and well-organized database system that is customized to your unique workflow, and I am open to cooperation and teamwork. I can create effective database solutions that enhance data organization, expedite processes, and facilitate better decision-making, regardless of whether you are managing employee data, transactions, inventory, customer records, or any other operational process. 
 Together, let's transform your data into an effective tool for expansion and productivity.
 
-![image](https://github.com/user-attachments/assets/47661e8a-3146-449d-ae03-3a3b00b83c5d)
+![Image](https://github.com/user-attachments/assets/a0645e25-7114-4c59-be4c-a3d7b283cd3b)
 
+For any collaborative work or gigs, reach out to me at:
 
-
-
-
-
-
+📧 Email: oladejoidris55@gmail.com
+📞 Phone: 07025062857
