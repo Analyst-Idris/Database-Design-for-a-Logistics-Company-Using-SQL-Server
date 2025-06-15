@@ -1,6 +1,5 @@
 # Database-Design-for-a-Logistics-Company-Using-SQL-Server
-![Image](https://github.com/user-attachments/assets/619b51cc-19a8-4ed8-8b46-8d2e210b9935) ![Image](https://github.com/user-attachments/assets/d4eb84ce-33d0-44f6-bd3d-98006788bcfe)
-
+![Image](https://github.com/user-attachments/assets/619b51cc-19a8-4ed8-8b46-8d2e210b9935)
 ## Introduction(Overview of the Project)
 
 Effective data management is critical for any company, especially in industries like logistics, where operational efficiency and customer satisfaction are key drivers of success. A well-designed database system enables businesses to store, retrieve, and analyze vast amounts of data efficiently, ensuring smooth day-to-day operations and informed decision-making.
